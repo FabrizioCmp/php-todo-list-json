@@ -21,8 +21,15 @@
         <div class="container">
             <h1>ToDoList</h1>
             <ul class="list">
-                <li v-for="task in tasksList">task</li>
+                <li v-for="task in tasksList">
+                    <span class="task_name">{{task.task}}</span>
+                    <button class="btn_remove">Remove</button>
+                </li>
             </ul>
+            <form @submit.prevent="onSubmit" class="addtask_box">
+                <input type="text" placeholder="inserire task da aggiungere" v-model="taskToAdd.task">
+                <button  class="btn_add">Add</button>
+            </form>
         </div>
     </div>
 </body>

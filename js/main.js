@@ -24,14 +24,21 @@ const app = createApp({
                 this.fetchList();
             });
         },
-        toggle_task(index){
+        toggle_task(index) {
             this.tasksList[index].completed = !this.tasksList[index].completed;
             console.log(this.tasksList[index].completed);
-            axios.post("api/tasksList.php", {"index": index}, {
+            axios.post("api/tasksList.php", { "index": index }, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             })
-        }
+        },
+        onRemove(indexRemove) {
+            axios.post("api/tasksList.php", { "indexRemove": indexRemove }, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((resp) => {
 
+                this.fetchList();
+            });
+        }
     },
     mounted() {
         this.fetchList();

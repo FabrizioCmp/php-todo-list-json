@@ -1,14 +1,10 @@
 [
     {
         "task": "HTML",
-        "completed": true
+        "completed": false
     },
     {
-        "task": "PHP",
-        "completed": true
-    },
-    {
-        "task": "SQL",
-        "completed": true
+        "task": "Javascript",
+        "completed": false
     }
 ]

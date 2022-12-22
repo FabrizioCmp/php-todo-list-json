@@ -23,7 +23,7 @@
             <ul class="list">
                 <li v-for="task,i in tasksList">
                     <span @click="toggle_task(i)" class="task_name" :class="{done : task.completed}">{{task.task}}</span>
-                    <button class="btn_remove">Remove</button>
+                    <button @click="onRemove(i)" class="btn_remove">Remove</button>
                 </li>
             </ul>
             <form @submit.prevent="onSubmit" class="addtask_box">

@@ -21,14 +21,14 @@
         <div class="container">
             <h1>ToDoList</h1>
             <ul class="list">
-                <li v-for="task in tasksList">
-                    <span class="task_name">{{task.task}}</span>
+                <li v-for="task,i in tasksList">
+                    <span @click="toggle_task(i)" class="task_name" :class="{done : task.completed}">{{task.task}}</span>
                     <button class="btn_remove">Remove</button>
                 </li>
             </ul>
             <form @submit.prevent="onSubmit" class="addtask_box">
                 <input type="text" placeholder="inserire task da aggiungere" v-model="taskToAdd.task">
-                <button  class="btn_add">Add</button>
+                <button class="btn_add" ref="btn_add">Add</button>
             </form>
         </div>
     </div>

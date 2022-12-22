@@ -9,7 +9,7 @@ $newtask = $_POST["task"] ?? "";
 if($newtask){
     $taskList[] = [
         "task" => $newtask,
-        "completed" => "false",
+        "completed" => false,
     ];
     file_put_contents("../tasksList.json",json_encode($taskList, JSON_PRETTY_PRINT));
 };

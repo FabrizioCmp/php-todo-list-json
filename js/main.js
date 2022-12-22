@@ -5,7 +5,7 @@ const app = createApp({
         return {
             tasksList: [],
             taskToAdd: {
-                "task" : "",
+                "task": "",
             },
         }
     },
@@ -20,10 +20,15 @@ const app = createApp({
             axios.post("api/tasksList.php", this.taskToAdd, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             }).then((resp) => {
-                
+
                 this.fetchList();
             });
+        },
+        toggle_task(index){
+            this.tasksList[index].completed = !this.tasksList[index].completed;
+            console.log(this.tasksList[index].completed)
         }
+
     },
     mounted() {
         this.fetchList();

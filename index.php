@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,18 @@
     <link rel="stylesheet" href="css/style.css">
     <title>ToDolist</title>
 </head>
+
 <body>
-    
+    <div id="app">
+        <div class="container">
+            <h1>ToDoList</h1>
+            <ul class="list">
+                <li v-for="task in tasksList">task</li>
+            </ul>
+        </div>
+    </div>
 </body>
+
+<script src="js/main.js"></script>
+
 </html>

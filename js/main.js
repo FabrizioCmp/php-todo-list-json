@@ -16,12 +16,11 @@ const app = createApp({
             });
         },
         onSubmit() {
-            console.log(this.taskToAdd);
             axios.post("api/tasksList.php", this.taskToAdd, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             }).then((resp) => {
-
                 this.fetchList();
+                this.taskToAdd.task = "";
             });
         },
         toggle_task(index) {

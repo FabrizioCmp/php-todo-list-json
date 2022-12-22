@@ -29,9 +29,12 @@ li{
     padding: 5px 0;
 }
 .task_name{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
+    padding: 0 5px;
+    max-width: 200px;
+    word-wrap: break-word ;
 }
 .btn_remove{
     background-color: rgb(209, 19, 19);

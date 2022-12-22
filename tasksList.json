@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "task": "HTML",
+        "completed": false
+    },
+    {
+        "task": "SQL",
+        "completed": false
+    }
+]
